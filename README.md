@@ -31,7 +31,7 @@ This project is a Real-Time Weather Monitoring System that fetches weather data 
 3. Create a .env file in the root directory and add your OpenWeatherMap API key:
    ``` OPENWEATHER_API_KEY=your_api_key_here  ```
    
-4. Run the applucation in 2 different terminals
+4. Run the application in 2 different terminals
   ```
   python weather_monitor.py
   python app.py 
