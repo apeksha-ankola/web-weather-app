@@ -26,19 +26,15 @@ This project is a Real-Time Weather Monitoring System that fetches weather data 
 2. Install the required packages:
    ```
    pip install -r requirements.txt
+   pip install python-dotenv
    ```
 3. Create a .env file in the root directory and add your OpenWeatherMap API key:
    ``` OPENWEATHER_API_KEY=your_api_key_here  ```
    
-4. Create the SQLite database and tables::
-   ```
-   from database.database import create_table
-   create_table()
-
-   ```
-5. Run the weather monitoring script
+4. Run the applucation in 2 different terminals
   ```
   python weather_monitor.py
+  python app.py 
   ```
 # Frontend Installation Steps: Open index.html from templates folder, in your preferred web browser.
 
