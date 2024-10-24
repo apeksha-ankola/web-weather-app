@@ -4,7 +4,11 @@ from datetime import datetime
 from weather_aggregator import calculate_daily_summary
 from database.database import create_table, insert_weather_summary
 
-API_KEY = "fa2bb54898a54fa40789305a253b0fda"  # Replace with your OpenWeatherMap API key
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
+API_KEY = os.getenv('OPENWEATHER_API_KEY')
 CITIES = ["Delhi", "Mumbai", "Chennai", "Bangalore", "Kolkata", "Hyderabad"]
 INTERVAL = 3000  # 5 minutes
 

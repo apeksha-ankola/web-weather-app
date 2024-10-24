@@ -10,16 +10,12 @@ async function fetchWeatherData() {
             if (!response.ok) throw new Error(`Error fetching weather for ${city}`);
             const weather = await response.json();
             const card = `
-                <div class="col-md-4 weather-item">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">${weather.city}</h5>
-                            <p class="card-text">Temperature: ${weather.temp} °C</p>
-                            <p class="card-text">Feels Like: ${weather.feels_like} °C</p>
-                            <p class="card-text">Condition: ${weather.condition}</p>
-                            <p class="card-text">Last Updated: ${new Date(weather.timestamp * 1000).toLocaleString()}</p>
-                        </div>
-                    </div>
+                <div class="weather-card">
+                    <h5 class="card-title">${weather.city}</h5>
+                    <p class="card-text">Temperature: ${weather.temp} °C</p>
+                    <p class="card-text">Feels Like: ${weather.feels_like} °C</p>
+                    <p class="card-text">Condition: ${weather.condition}</p>
+                    <p class="card-text">Last Updated: ${new Date(weather.timestamp * 1000).toLocaleString()}</p>
                 </div>
             `;
             weatherDisplay.innerHTML += card;
@@ -30,7 +26,10 @@ async function fetchWeatherData() {
     }
 }
 
+
+// Call fetchWeatherData on page load to populate the city weather cards
 fetchWeatherData();
+
 
 async function getWeather() {
     const apiKey = 'fa2bb54898a54fa40789305a253b0fda';

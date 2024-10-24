@@ -8,18 +8,23 @@
 </head>
 <body>
     <div id="weather-container">
-        <h2>Real-Time Data Processing System <b> Weather Monitoring with Rollups and Aggregates</h2>
+        <h2>Real-Time Data Processing System <b> Weather Monitoring with Rollups and Aggregates</b></h2>
+        
+        <!-- You can keep this if you want to search for a city -->
         <input type="text" id="city" placeholder="Enter city">
         <button onclick="getWeather()">Search</button>
 
         <img id="weather-icon" alt="Weather Icon">
 
         <div id="temp-div"></div>
-
         <div id="weather-info"></div>
-
         <div id="hourly-forecast"></div>
+
+        <!-- Add this div to hold the city weather cards -->
+        <div class="row" id="weatherDisplay"></div> <!-- This will hold all the weather cards -->
     </div>
     <script src="static/main.js"></script>
 </body>
 </html>
+
+
