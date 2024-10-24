@@ -1,3 +1,4 @@
+
 const cities = ['Delhi', 'Mumbai', 'Chennai', 'Bangalore', 'Kolkata', 'Hyderabad'];
 
 async function fetchWeatherData() {
@@ -35,10 +36,11 @@ async function fetchWeatherData() {
 }
 
 async function getWeather() {
-    const apiKey = 'fa2bb54898a54fa40789305a253b0fda';
+    const apiKey = 'API-KEY';
     const city = document.getElementById('city').value;
     const unit = document.getElementById('temp-unit').value;
-
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit === 'C' ? 'metric' : 'imperial'}&appid=${apiKey}`;
+    
     if (!city) {
         alert('Please enter a city');
         return;
