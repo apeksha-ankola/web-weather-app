@@ -1,28 +1,33 @@
+/* Apply background image to the entire body */
 body {
-    background: #8C52FF;
+    background-image: url('bg.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: auto; /* Allow height to adjust */
+    height: auto;
     margin: 0;
-    padding: 20px; /* Add padding for smaller screens */
+    padding: 20px;
 }
 
+/* Adjust #weather-container to have some transparency */
 #weather-container {
-    background: rgba(255, 255, 255, 0.3);
-    max-width: 800px; /* Adjusted to accommodate multiple cards */
+    background: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
+    max-width: 800px;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
-    width: 100%; /* Ensure it takes full width on small screens */
+    width: 100%;
 }
 
 h2, label, p {
-    color: #fff;
+    color: #000000;
     margin: 8px 0;
 }
 
@@ -116,6 +121,34 @@ button:hover {
 .weather-card h5 {
     color: #8C52FF;
 }
+
+/* Dropdown styling */
+select {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #5e3b99; /* Darker background color matching the theme */
+    color: white;
+    border: 1px solid #8b48d7; /* Border color similar to hover button */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover effect for the dropdown */
+select:hover {
+    background-color: #8b48d7; /* Slightly lighter on hover */
+}
+
+/* Style for the dropdown options */
+option {
+    background-color: #5e3b99; /* Darker background for options */
+    color: white; /* White text color */
+}
+
+/* Updated button hover for consistency */
+button:hover {
+    background: #5e3b99; /* Same color as dropdown */
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
