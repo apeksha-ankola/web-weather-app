@@ -1,10 +1,14 @@
 from flask import Flask, jsonify, render_template, request
 import requests
 import time
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
 
 app = Flask(__name__)
 
-API_KEY = 'fa2bb54898a54fa40789305a253b0fda'
+API_KEY = os.getenv('OPENWEATHER_API_KEY')
 
 # Simulated daily summary data
 daily_summary = {
