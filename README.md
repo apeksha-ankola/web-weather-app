@@ -30,15 +30,16 @@ This project is a Real-Time Weather Monitoring System that fetches weather data 
    ```
 3. Create a .env file in the root directory and add your OpenWeatherMap API key:
    ``` OPENWEATHER_API_KEY=your_api_key_here  ```
+   also add the api key in main.js which is in the folder static.
    
-4. Run the application in 2 different terminals
+5. Run the application in 2 different terminals
   ```
   python weather_monitor.py
   python app.py 
   ```
 # Frontend Installation Steps: Open index.html from templates folder, in your preferred web browser.
 
-## Database Schema
+# Database Schema
 # The database consists of a single table named weather_summary with the following columns:
 
 ```id ```: Auto-incremented primary key.
