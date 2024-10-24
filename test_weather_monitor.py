@@ -1,7 +1,6 @@
 import pytest
 from weather_monitor import fetch_weather_data
 from weather_aggregator import calculate_daily_summary
-
 # Test data retrieval from API
 def test_fetch_weather_data():
     city = "Delhi"
