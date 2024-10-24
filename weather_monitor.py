@@ -3,7 +3,7 @@ import time
 from datetime import datetime
 from weather_aggregator import calculate_daily_summary
 from database.database import create_table, insert_weather_summary
-
+create_table()
 from dotenv import load_dotenv
 import os
 load_dotenv()

@@ -1,0 +1,12 @@
+{
+    "temperature_threshold": 35,
+    "consecutive_updates": 2,
+    "alert_via_email": false,
+    "email_config": {
+        "smtp_server": "smtp.example.com",
+        "port": 587,
+        "sender_email": "youremail@example.com",
+        "recipient_email": "recipient@example.com",
+        "password": "yourpassword"
+    }
+}

@@ -11,9 +11,10 @@ async function fetchWeatherData() {
             if (!response.ok) throw new Error(`Error fetching weather for ${city}`);
             const weather = await response.json();
 
+            // Convert temperature from Kelvin based on user preference
             // Convert temperature based on user preference
-            const temp = unit === 'C' ? Math.round(weather.temp - 273.15) : Math.round((weather.temp - 273.15) * 9/5 + 32);
-            const feelsLike = unit === 'C' ? Math.round(weather.feels_like - 273.15) : Math.round((weather.feels_like - 273.15) * 9/5 + 32);
+            const temp = unit === 'C' ? Math.round(weather.temp) : Math.round((weather.temp) * 9/5 + 32);
+            const feelsLike = unit === 'C' ? Math.round(weather.feels_like) : Math.round((weather.feels_like) * 9/5 + 32);
             const tempUnit = unit === 'C' ? '°C' : '°F';
 
             const card = `
